@@ -95,7 +95,7 @@ function onTick()
 		if period >= 60 then
 			period = 0
 		end
-		if averagePeriod <= period * .5 then
+		if averagePeriod <= period * .5 or averagePeriod >= period * 2 then
 			averagePeriod = period
 		else
 			averagePeriod = .8 * averagePeriod + .2 * period
